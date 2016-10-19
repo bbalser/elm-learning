@@ -1,8 +1,9 @@
-module FizzBuzz exposing (..)
+module FizzBuzz exposing (play)
 
 play : List Int -> List String
 play list =
   List.map convert list
+
 
 convert : Int -> String
 convert int =
