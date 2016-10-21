@@ -6,6 +6,7 @@ import String
 import FizzBuzzTests
 import BabysitterTests
 import BowlingTests
+import ReversePolishTests
 
 
 all : Test
@@ -14,4 +15,5 @@ all =
         [ FizzBuzzTests.fizzbuzz
         , BabysitterTests.babysitter
         , BowlingTests.bowling
+        , ReversePolishTests.all
         ]
