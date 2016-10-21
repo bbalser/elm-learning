@@ -29,8 +29,8 @@ performOperation operator stack =
       "*" -> List.product operands
       "/" ->
         let
-          operator1 = getAt 0 0 operands
-          operator2 = getAt 1 0 operands
+          operator1 = getAt 0 operands
+          operator2 = getAt 1 operands
         in
           operator2 / operator1 |> round
       _ -> 0
@@ -40,6 +40,7 @@ toInt : String -> Result String Int
 toInt string =
   String.toInt string
 
-getAt : Int -> a -> List a -> a
-getAt idx default list =
-  (List.head <| List.drop idx list) |> Maybe.withDefault default
+
+getAt : Int -> List number -> number
+getAt idx list =
+  (List.head <| List.drop idx list) |> Maybe.withDefault 0
