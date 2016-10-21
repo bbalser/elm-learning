@@ -36,14 +36,6 @@ performOperation operator stack =
       _ -> 0
 
 
-isInt : String -> Bool
-isInt char =
-  char
-    |> String.toInt
-    |> Result.map (\x -> True)
-    |> Result.withDefault False
-
-
 toInt : String -> Result String Int
 toInt string =
   String.toInt string
