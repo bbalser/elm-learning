@@ -43,4 +43,4 @@ toInt string =
 
 getAt : Int -> List number -> number
 getAt idx list =
-  (List.head <| List.drop idx list) |> Maybe.withDefault 0
+  List.drop idx list |> List.head |> Maybe.withDefault 0
